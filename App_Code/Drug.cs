@@ -34,7 +34,7 @@ public class Drug : System.Web.Services.WebService
       
 
         DataTable dt = new DataTable();
-        using (SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=YEAR1718;User ID=sa;Password=sa:123"))
+        using (SqlConnection con = new SqlConnection("Server=0ab52f39-491d-4b01-97b7-a7c800b38033.sqlserver.sequelizer.com;Database=db0ab52f39491d4b0197b7a7c800b38033;User ID=hiwjwbospmhazmtl;Password=WqqgXwUfX5XubN2smdSKJuC5yyPXixqFoAJiN4k4HVF7onQ6JaV2Tj2BVtPyQ65z;"))
         {
             using (SqlCommand cmd = new SqlCommand("select top 50 Prodcode, it_name,It_CurStock,RackNo from itemmaster where It_Name like '" + name+"%'", con))
             {
@@ -70,7 +70,7 @@ public class Drug : System.Web.Services.WebService
 
 
         DataTable dt = new DataTable();
-        using (SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=YEAR1718;User ID=sa;Password=sa:123"))
+        using (SqlConnection con = new SqlConnection("Server=0ab52f39-491d-4b01-97b7-a7c800b38033.sqlserver.sequelizer.com;Database=db0ab52f39491d4b0197b7a7c800b38033;User ID=hiwjwbospmhazmtl;Password=WqqgXwUfX5XubN2smdSKJuC5yyPXixqFoAJiN4k4HVF7onQ6JaV2Tj2BVtPyQ65z;"))
         {
             using (SqlCommand cmd = new SqlCommand("select SupplierMaster.SupplierName,SupplierMaster.Address1,SupplierMaster.Address2,SupplierMaster.Phone from Itemmaster left join SupplierMaster on Itemmaster.SupplierCode= SupplierMaster.SupplierID where Itemmaster.Prodcode='" + name+"'", con))
             {
